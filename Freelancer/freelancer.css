@@ -1,0 +1,352 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Roboto,sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+    background: #100F0F;
+}
+.text-center{
+    text-align: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 4rem 0.4rem;
+}
+nav h2{
+    font-size: 30px;
+    color:#fff ;
+}
+nav h2:hover{
+    cursor: pointer;
+}
+nav h2 span{
+    color: #dd0606;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li{
+    background: #100F0F;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+nav ul a{
+    color: #fff;
+    font-weight: 600;
+}
+nav ul li:hover{
+    background: #fff;
+}
+nav ul li:hover a{
+    color: orange;
+}
+nav .active{
+    background: #fff;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+nav .active a{
+    color: orange;
+}
+.close-btn{
+    display: none;
+}
+
+.content {
+    padding: 2rem 0rem 5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+.content .border{
+    border-top: solid 1px red ;
+    width: 10%;
+    padding-bottom: 10px;
+}
+.content .left h2{
+    font-size: 30px;
+    line-height: 1.4;
+    color: #fff;
+    font-weight: 700;
+}
+.content .left h2 span{
+    color: #dd0606;
+}
+.content .left h4{
+    color: #fff;
+    margin: 10px 0 22px;
+    font-weight: 200;
+    font-size: 12px;
+}
+.content .btn{
+    padding: 0.4rem;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    background: #dd0606;
+}
+.content  .btn:hover{
+    background: #fff;
+}
+.content .btn:hover a{
+    color: orange;
+}
+.content .btn a{
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
+    font-size: 12px;
+}
+.content .left ul{
+    display: flex;
+    gap: 1rem;
+    margin-top: 35px;
+    align-items: center;
+}
+.content .left ul img{
+    width: 20px;
+}
+.content .right{
+    width:fit-content;
+    text-align: center;
+}
+.content .right h6{
+    font-size: 15.5px;
+    margin-bottom: 22px;
+    color: #fff;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) +label{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 60px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #dd0606;
+    padding: 0;
+    margin: auto;
+    cursor: pointer;
+}
+label{ 
+    transition: all 2s ease;
+}
+.checkbox:checked + label::before,
+.checkbox:not(:checked) +label::before{
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #dd0606;
+    background: #fff;
+    font-family: "Material Icons";
+    content: '\f1e2';
+    z-index: 20;
+    top: -10px;
+    left: -10px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    transition: all 0.5s ease;
+}
+.checkbox:checked + label::before{
+    transform: translateX(44px) rotate(-270deg);
+    transition: all 0.5s ease;
+}
+.card-3d-wrap{
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+    height: 400px;
+    margin-top: 32px;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+.card-3d-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-out;
+}
+.content .right h4{
+    font-weight: 600;
+    color: #fff;
+}
+.card-font,.card-back{
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+    background-image: url("photos/background.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 300%;
+    position: absolute;
+    border-radius: 6px;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+}
+.card-back{
+    transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper{
+    transform: rotateY(180deg);
+}
+.center-wrap{
+    position: absolute;
+    width: 100%;
+    padding: 0 35px;
+    top: 50%;
+    left: 0;
+    transform: translate3d(0,-50%,35px)
+    perspective(100px);
+    display: block;
+}
+.heading{
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+.form-group{
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+.form-style{
+    padding: 13px 20px ;
+    padding-left: 55px;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: #fff /*color smoke*/;
+    background: #242323;
+    border: none;
+}
+.form-style:focus,.form-style:active{
+    border: none;
+    outline: none;
+}
+.input-icon{
+    position: absolute;
+    top:12px;
+    left: 18px;
+    height: 48px;
+    font-size: 24px;
+    text-align: left;
+    color: #dd0606;
+    transform: all 200ms linear;
+}
+.form-group input::placeholder{
+    color: #fff /*color smoke*/;
+    opacity: 0.7;
+    transform: all 200ms linear;
+}
+.form-group input:focus::placeholder{
+    opacity: 0;
+    transform: all 200ms linear;
+}
+.center-wrap .btn{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+.link{
+    color: #fff /*color smoke*/;
+    display: block;
+}
+.link:hover{
+    color: #dd0606;
+}
+@media screen and (max-width:950px){
+    .content {
+        padding: 2rem 2rem 0rem 4rem;
+    }
+}
+@media screen and (max-width:850px){
+    nav{
+        padding: 0.8rem 1rem 0.4rem;
+    }
+    nav ul{
+        flex-direction: column;
+        position: fixed;
+        top: 17%;
+        gap: 1.5rem;
+        padding: 20px 0;
+        right: -100%;
+        width: 100%;
+        background: #1b1b1b;
+        transition: all 700ms ease;
+        z-index: 4;
+    }
+    .close-btn{
+        display: block;
+        color: #fff;
+    }
+    .close-btn .close{
+        display: none;
+    }
+    nav ul li{
+        background: none;
+    }    
+    nav ul li:hover{
+        background: none;
+    }
+    nav ul li:hover a{
+        color:#dd0606;
+    }
+    nav .active{
+        background: none;
+        padding: 0;
+    }
+    nav .active a{
+        color: #dd0606;
+    }
+    .content {
+        padding: 2rem 4rem 5rem 4rem;
+        grid-template-columns: 1fr;
+    }
+    .content .right{
+        width: 100%;
+    }
+    .content .card-3d-wrap{
+        padding: 0 15rem ;
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px){
+    .content .card-3d-wrap{
+        padding: 0 8rem ;
+        width: 100%;
+    }
+}
+@media screen and (max-width:400px){
+    .content .card-3d-wrap{
+        padding: 0 6rem ;
+    }
+}
